@@ -1,2 +1,2 @@
-# java-url-shortener
+# java-url-shortner
 A URL shortner in Lambda AWS
