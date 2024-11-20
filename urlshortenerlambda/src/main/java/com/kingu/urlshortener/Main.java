@@ -1,4 +1,4 @@
-package com.kingu.urlshortner;
+package com.kingu.urlshortener;
 
 import java.util.HashMap;
 import java.util.Map;
