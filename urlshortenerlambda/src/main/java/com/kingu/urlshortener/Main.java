@@ -42,7 +42,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
         // Get input URL (the long one) and it's expiration time
         String originalUrl = bodyMap.get("originalUrl");
         String expirationTime = bodyMap.get("expirationTime");
-        long expirationTimeInSeconds = Long.parseLong(expirationTime) * 3600;
+        long expirationTimeInSeconds = Long.parseLong(expirationTime);
 
         // Generate a random UUID String for the original URL
         String shortUrlCode = UUID.randomUUID().toString().substring(0, 8);
