@@ -60,7 +60,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Obj
         Map<String, Object> response = new HashMap<>();
 
         // If expiration time is exceeded
-        if(currentTimeInSeconds < urlData.getExpirationTime()) {
+        if(currentTimeInSeconds > urlData.getExpirationTime()) {
 
             // 410 Gone: Resource permanently unavaliable 
             // https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/410
