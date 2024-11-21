@@ -20,7 +20,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
     private final S3Client s3Client = S3Client.builder().build();
 
     @Override // AWS Lambda default function
-    public Map<String, String> handleRequest(Map<String, Object> i, Context cntxt) {
+    public Map<String, String> handleRequest(Map<String, Object> i, Context ctx) {
         
         // JSON String input
         String body = (String) i.get("body");
