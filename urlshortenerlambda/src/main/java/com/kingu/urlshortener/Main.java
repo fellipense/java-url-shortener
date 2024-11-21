@@ -36,7 +36,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
         } catch (Exception exception) {
 
             throw new RuntimeException("Error parsing JSON body: " + exception.getMessage(), exception);
-            
+
         }
 
         // Get input URL (the long one) and it's expiration time
@@ -56,7 +56,7 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
             String urlDataJson = objectMapper.writeValueAsString(urlData);
 
             PutObjectRequest request = PutObjectRequest.builder()
-                .bucket("kingu-url-shotener-storage")
+                .bucket("kingu-url-shortener-storage")
                 .key(shortUrlCode + ".json")
                 .build();
             
