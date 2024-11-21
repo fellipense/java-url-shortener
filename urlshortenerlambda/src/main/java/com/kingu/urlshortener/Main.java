@@ -30,9 +30,13 @@ public class Main implements RequestHandler<Map<String, Object>, Map<String, Str
         
         // Maybe the input isn't "parsable"
         try {
+            
             bodyMap = objectMapper.readValue(body, Map.class);
+
         } catch (Exception exception) {
+
             throw new RuntimeException("Error parsing JSON body: " + exception.getMessage(), exception);
+            
         }
 
         // Get input URL (the long one) and it's expiration time
